@@ -15,6 +15,11 @@ var server = http.createServer(function (req, res) {
     //de la peticion le asigno una variable url
     var url = req.url;
     //sirvo la url con mi server statico
+    if(url == "/"){
+         // Sirve el index
+         url = "/index.html";
+     }
+     console.log(`> URL Solicitada: ${url} ...`.yellow);
     staticServer.serve(url, res);
      });
       // Poner a trabjar al server
