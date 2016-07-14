@@ -1,5 +1,7 @@
 function hola(){
-     alert("Bienvenido a esta pagina ...");
+         sweetAlert("World Places",
+     "¡Bienvenido a esta página!");
+     document.body.style.backgroundColor = "lightseagreen";
  }
  
  function changeBkgColor(){
@@ -10,6 +12,6 @@ function hola(){
      }else{
          color = "lightseagreen";
      }
-     console.log("> Cambiando color a " + color);
+     console.log("> Color Original: " + color); 
      document.body.style.backgroundColor = color;
  }
