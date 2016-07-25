@@ -1,18 +1,16 @@
-function hola(){
-         sweetAlert("World Places",
-     "¡Bienvenido a esta página!");
-     document.body.style.backgroundColor = 
-     "lightseagreen";
+ function getFortuneFromServer(){
+     // Realizando la solicitud get en AJAX
+     $.get("/getfortune","", function(data, status){
+         console.log("> " +  typeof(data));
+         console.log("> Estatus de respuesta: " + status);
+         swal({
+             title: "¡TU FORTUNA!",
+             text: data.mensaje,
+              imageUrl: "img/gl.png"
+          });
+      },"json");
+ 
  }
  
- function changeBkgColor(){
-     var color = document.body.style.backgroundColor;
-     console.log("> Color Original: " +  color);
-     if(color == "lightseagreen"){        
-         color = "honeydew";
-     }else{
-         color = "lightseagreen";
-     }
-     console.log("> Color Original: " + color); 
-     document.body.style.backgroundColor = color;
- }
+
+ ;
