@@ -10,7 +10,8 @@ module.exports = {
         //var connectionString = "mongodb://127.0.0.1:27017/fortune";
         //var connectionString = 
         //"mongodb:///fortune";  
-        mongoClient.connect("mongodb://127.0.0.1:27017/fortune",
+        mongoClient.connect("mongodb://mensajesfortuna:lalombris11@ds042379.mlab.com:42379/mensajesfortuna",
+       // mongoClient.connect("",
         function(err, db){
             if(err){
                 console.log("> ERROR al conectarse a" +
